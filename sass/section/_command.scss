@@ -3,26 +3,44 @@
 }
 
 .command-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .command__list {
-  display: flex;
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 .command-item {
   background: $backgroundColorPrimary;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
-.command-item:not(:nth-child(4n)) {
-  margin-right: 30px;
-}
+
 .command__img {
   display: block;
   max-width: 100%;
   height: auto;
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 .contacts {
   padding-top: 30px;

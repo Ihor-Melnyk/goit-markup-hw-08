@@ -1,5 +1,8 @@
 .doing.section {
   padding-top: 0;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 .doing-title {
   margin-top: 0;

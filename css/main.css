@@ -138,7 +138,8 @@ ul {
 }
 
 .hero {
-  padding: 200px 0;
+  max-width: 1600px;
+  padding: 118px 0;
   background: var(--background-title-color);
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/headerimg.jpg);
@@ -146,22 +147,30 @@ ul {
   background-position: 50% 50%;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
+}
+
 .hero__title {
-  margin: 0 auto 30px;
+  max-width: 360px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 30px;
   color: var(--second-text-color);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
-    width: 100vw;
+    max-width: 696px;
     font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;
+    font-size: 44px;
+    line-height: 1.36;
     letter-spacing: 0.06em;
   }
 }
@@ -198,21 +207,37 @@ ul {
 }
 
 .dignity__list {
-  display: flex;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .dignity__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .dignity__item {
-  width: 270px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-.dignity__item:not(:first-child) {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .dignity__item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dignity__item {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .thumb {
-  width: 270px;
   height: 120px;
   display: flex;
   justify-content: center;
@@ -231,12 +256,19 @@ ul {
 .dignity__title {
   margin-top: 0;
   margin-bottom: 10px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .dignity__title {
+    text-align: left;
+  }
 }
 
 .dignity__text {
@@ -251,6 +283,12 @@ ul {
 
 .doing.section {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .doing.section {
+    display: none;
+  }
 }
 
 .doing-title {
@@ -302,21 +340,47 @@ ul {
 }
 
 .command-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .command-title {
+    margin-bottom: 50px;
+  }
 }
 
 .command__list {
-  display: flex;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .command__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .command-item {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-.command-item:not(:nth-child(4n)) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .command-item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .command-item {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .command__img {
@@ -325,6 +389,8 @@ ul {
   height: auto;
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .contacts {
@@ -908,15 +974,40 @@ ul {
 
 .container {
   box-sizing: border-box;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .logo {
@@ -947,11 +1038,22 @@ ul {
 
 .title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-title-color);
+  }
 }
 
 /* --------------------HEADER------------------------- */

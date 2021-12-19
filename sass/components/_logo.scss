@@ -1,0 +1,17 @@
+.logo {
+  font-family: Raleway;
+  color: var(--main-title-color);
+  @include font(700, 26px, 1.19, 0.03em);
+}
+.logo-text {
+  font-family: Raleway;
+  @include font(700, 26px, 1.19, 0.03em);
+  color: var(--third-tittle-color);
+}
+
+.logo__header-text {
+  color: var(--third-tittle-color);
+}
+.logo__footer-text {
+  color: var(--fourth-tittle-color);
+}

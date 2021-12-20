@@ -4,16 +4,37 @@
 }
 .footer-container {
   text-align: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    text-align: left;
+    // flex-wrap: nowrap;
     align-items: baseline;
     justify-content: space-between;
+  }
+}
+.footer-container__wrap {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc(100% / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .footer__list {
   margin-top: 20px;
   margin-bottom: -8px;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .footer__item {
   margin-bottom: 8px;
@@ -30,6 +51,13 @@
 .footer-social {
   margin-top: 60px;
   margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-top: 6px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   // margin-left: 70px;
 }
 .footer-social__title {
@@ -70,9 +98,16 @@
   fill: currentColor;
 }
 .footer-form {
+  margin-top: 60px;
   width: 100%;
-  // width: 570px;
-  // margin-left: 93px;
+  @media screen and (min-width: 768px) {
+    margin-top: 6px;
+  }
+}
+.form {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
 }
 .footer-form__title {
   @include font($fw: 700);
@@ -81,9 +116,17 @@
   color: var(--fourth-tittle-color);
 }
 .subscribe {
-  // display: flex;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .subscribe__input {
+  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+  }
   width: 100%;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -104,7 +147,9 @@
 }
 
 .subscribe__button {
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -121,6 +166,9 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 .subscribe__icon {
   fill: var(--fourth-tittle-color);

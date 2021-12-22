@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   transition: opacity 1000ms, visibility 1000ms;
+  // overflow-y: scroll;  - прокрутка модалки
 }
 
 .backdrop.is-hidden .modal {

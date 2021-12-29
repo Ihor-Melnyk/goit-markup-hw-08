@@ -75,6 +75,8 @@ ul {
   padding-top: 16px;
   padding-bottom: 16px;
   position: relative;
+  max-height: 60px;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -174,6 +176,16 @@ ul {
 
 .header-contacts__link:hover, .header-contacts__link:focus {
   color: var(--main-title-color);
+}
+
+.menu-toggle {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fourth-tittle-color);
 }
 
 .hero {

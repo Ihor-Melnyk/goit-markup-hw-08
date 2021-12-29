@@ -8,6 +8,8 @@
   padding-top: 16px;
   padding-bottom: 16px;
   position: relative;
+  max-height: 60px;
+  justify-content: space-between;
 }
 .header__logo {
   @media screen and (min-width: 768px) {
@@ -95,19 +97,13 @@
     color: var(--main-title-color);
   }
 }
-// .mobile-menu {
-//   margin-left: auto;
-//   position: absolute;
-//   top: 10px;
-//   right: 10px;
-//   &:hover,
-//   &:focus {
-//     color: var(--main-title-color);
-//   }
-//   @media screen and (min-width: 768px) {
-//     display: none;
-//   }
-// }
-// .mobile-menu__icon {
-//   fill: currentColor;
-// }
+
+.menu-toggle {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fourth-tittle-color);
+}

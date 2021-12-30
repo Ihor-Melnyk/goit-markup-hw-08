@@ -1107,7 +1107,7 @@ ul {
 .backdrop {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.418);
+  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   transition: opacity 1000ms, visibility 1000ms;
@@ -1119,8 +1119,8 @@ ul {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 100%;
+  max-width: 450px;
   padding: 40px;
   background-color: var(--fourth-tittle-color);
   border-radius: 4px;
@@ -1131,6 +1131,12 @@ ul {
   transform: scale(1) rotate(0);
   transform: translate(-50%, -50%);
   transition: transform 1000ms;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .modal-form__title {

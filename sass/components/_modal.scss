@@ -1,7 +1,8 @@
 .backdrop {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.418);
+  background-color: rgba(0, 0, 0, 0.2);
+  // background-color: rgba(0, 0, 0, 0.418);
   position: fixed;
   top: 0;
   transition: opacity 1000ms, visibility 1000ms;
@@ -14,8 +15,13 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  // width: 528px;
+  // min-height: 581px;
+  width: 100%;
+  max-width: 450px;
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
   padding: 40px;
   background-color: var(--fourth-tittle-color);
   border-radius: 4px;

@@ -146,7 +146,9 @@
   align-items: center;
   @include font($lh: 1.71);
   color: var(--main-text-color);
-  padding-left: 12px;
+  @media screen and (min-width: 1200px) {
+    padding-left: 12px;
+  }
 }
 
 .checkbox > .checkbox__input {
@@ -162,7 +164,7 @@
   border-radius: 2px;
   fill: var(--fourth-tittle-color);
   background-color: var(--fourth-tittle-color);
-  margin-right: 8.38px;
+  margin-right: 7.6px;
 
   .checkbox__input:checked + & {
     border-color: $aktiveColor;
@@ -170,9 +172,18 @@
     background-origin: border-box;
   }
 }
-
+.chekbox-icon {
+  @include font($fs: 12px, $lh: 1.17);
+  @media screen and (min-width: 1200px) {
+    @include font($lh: 1.71);
+  }
+}
 .chekbox__link {
-  @include font($lh: 1.71);
+  @include font($fs: 12px, $lh: 1.17);
+  @media screen and (min-width: 1200px) {
+    @include font($lh: 1.71);
+  }
+
   color: $aktiveColor;
   text-decoration-line: underline;
   border-color: var(--fourth-tittle-color);
